@@ -23,13 +23,10 @@ def binarySearch(a, N, key): # 이진탐색
 for tc in range(1, T+1):
     # 400 300 350 (전체 쪽수, A,B가 찾을 쪽 번호)
     arr = list(map(int, input().split()))
-    # print(arr)
     N = arr[0]
     A = arr[1]
     B = arr[2]
     a = [i for i in range(N + 1)]
-    # print(binarySearch(a, N,A))
-    # print(binarySearch(a,N,B))
     if binarySearch(a, N,A) > binarySearch(a,N,B):
         print(f'#{tc} B')
     elif binarySearch(a,N,A) < binarySearch(a,N,B):
