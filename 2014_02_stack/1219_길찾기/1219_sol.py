@@ -26,7 +26,7 @@ for tc in range(10):
     data = [[0]*100 for _ in range(100)]
     visited = [0] * 100
 
-    for i in range(0, len(route)-1,2):
+    for i in range(0, len(route)-1, 2):
         # print(route[i])
         data[route[i]][route[i+1]] = 1
 
