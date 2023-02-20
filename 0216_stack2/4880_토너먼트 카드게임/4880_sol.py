@@ -7,6 +7,7 @@ def mergesort(arr):
     if len(arr) <= 1:
         return arr[0]
 
+    # 두개면 이때 가위바위보 ㄱㄱ
     if len(arr) <= 2:
         return rsp(arr)
 
@@ -77,5 +78,3 @@ for tc in range(1, T+1):
         arr[i] = [arr[i], i+1]
     idx = 0
     print(f'#{tc} {mergesort(arr)[1]}')
-
-    # 인덱스 어케 뽑는데
