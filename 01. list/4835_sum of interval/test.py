@@ -12,6 +12,7 @@ for tc in range(1, T+1):
     init = 0
     for i in range(M): # M개의 이웃한 수의 합
         init += arr[i]
+        # print(init)
 
     maxV = minV = init
     for i in range(N-M+1):
@@ -27,4 +28,4 @@ for tc in range(1, T+1):
 
     result = maxV - minV
 
-    print(f'#{tc} {result}')
+    # print(f'#{tc} {result}')
