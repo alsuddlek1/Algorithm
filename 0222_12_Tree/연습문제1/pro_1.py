@@ -1,7 +1,7 @@
 import sys
 sys.stdin = open('input.txt')
 
-def preorder(node):
+def preorder(node): # 전위순회
     if node != 0:
         # 전위 순회기 때문에 내가 할일 먼저 한다.
         # 지금 문제에서 할일은? 나를 출력
@@ -11,7 +11,7 @@ def preorder(node):
         # 오른쪽 자식을 조사
         preorder(right[node])
 
-def inorder(node):
+def inorder(node): # 중위순회
     if node != 0:
         # 왼쪽 자식을 조사
         inorder(left[node])
@@ -20,7 +20,7 @@ def inorder(node):
         # 오른쪽 자식을 조사
         inorder(right[node])
 
-def postorder(node):
+def postorder(node): # 후위순회
     if node != 0:
         # 왼쪽 자식을 조사
         postorder(left[node])
@@ -60,11 +60,12 @@ for i in range(E):
     # Tree[c][2] == p
 # print(Tree)
 
+# 루트찾기
 root = 0
 for i in range(1, V+1): # 모든 노선 순회
     # 부모정보를 담았는데 부모가 없으면 루트
     if parent[i] == 0:
-        root = 1
+        root += 1
         break
 
 print(left)
