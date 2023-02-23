@@ -44,19 +44,17 @@ for tc in range(1, T+1):
     for i in range(1, N+1): # 모든 노선 순회
         # 부모정보를 담았는데 부모가 없으면 루트
         if parent[i] == 0:
-            root = 1
+            root = i
             break
 
     inorder(root)
     print(rlt)
-    # print()
-    # print(parent)
-    # print(left)
-    # print(right)
+    print(parent)
+    print(left)
+    print(right)
+    print()
+
 
 
 # 4. 루트값, N/2번출력
 # 부모가 없을때 루트 => parent[i] = 0 일때 루트
-#     for i in range(1, N+1):
-#         if parent[i] == 0:
-#             print(rlt[i-1])

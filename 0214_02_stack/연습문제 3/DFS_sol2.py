@@ -12,7 +12,7 @@ def DFS(start):
             # 조사를 한다? 는 행위
             DFS(next)
 
-# V = 노드 개수, E = 간선 개수
+# V(N) = 노드 개수, E(M) = 간선 개수
 V,E = map(int,input().split())
 
 # 간선정보
