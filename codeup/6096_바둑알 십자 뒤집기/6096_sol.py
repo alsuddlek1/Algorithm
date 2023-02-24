@@ -12,14 +12,14 @@ for tc in range(1, T+1):
     x, y = map(int, input().split())
     for i in range(19):
         for j in range(19):
-            if matrix[i][x-1] == 1:
-                matrix[i][x-1] = 0
+            if matrix[x-1][i] == 1:
+                matrix[x-1][i] = 0
             else:
-                matrix[i][x-1] = 1
-            if matrix[y-1][j] == 1:
-                matrix[y-1][j] = 0
+                matrix[x-1][i] = 1
+            if matrix[j][y-1] == 1:
+                matrix[j][y-1] = 0
             else:
-                matrix[y-1][j] = 1
+                matrix[j][y-1] = 1
     # x, y의 인풋값은 일반적인 수학에서 쓰는 행렬 좌표라서
     # 행렬의 좌표에서 +1 씩 한게 x, y값임
     # 그니까 y - 1 = i, x - 1 = j 임
