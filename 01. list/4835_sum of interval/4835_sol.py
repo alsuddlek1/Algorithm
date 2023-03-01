@@ -1,28 +1,30 @@
 import sys
 sys.stdin = open('input.txt')
 
-# N개의 정수중에 연속된 M개의 최대,최소합의 차 수하기
-
-# 데이터받기
-T = int(input())
+T = int(input()) # 테스트케이스 개수
 for tc in range(1, T+1):
-    N, M = map(int, input().split())
+    N,M = map(int,input().split())
+    # N : N개의 정수, 리스트 arr의 길이
+    # M : 연속된 수의 개수, 연속된 수 M개의 합 구해야함
     arr = list(map(int, input().split()))
-# 연속된 M개의 정수
+    # N개의 정수가 주어진 리스트
+
 
     maxV = 0
-    minV = 100000
+    minV = 10000
     for i in range(N-M+1):
-        result = 0
-        for j in range(i,i+M): # M개의 숫자 인덱스 뽑기
-            # print(j) # 012,123,234,,,
-            result += arr[j] # 정수의 합
-# 최대, 최소값
-        if result > maxV:
-            maxV = result
-        if result < minV:
-            minV = result
-    # print(maxV, minV)
-# 결과
-    results = maxV - minV
-    print(f'#{tc} {results}')
+        # i : arr의 인덱스
+        # N-M+1 : M만큼 연속된 숫자의 수를 조사해야하므로 마지막 M개 빠짐
+        sumV = 0  # M개의 이웃한 수의 합
+        for j in range(i, i+M):
+            # j : arr에서 M만큼의 인덱스
+            # (i, i+3) : i부터 M만큼 조사
+            sumV += arr[j]
+            # arr[j]들의 합
+            if sumV > maxV:
+                maxV = sumV
+            if sumV < minV:
+                minV = sumV
+    result = maxV - minV
+    print(maxV, minV)
+    print(result)
