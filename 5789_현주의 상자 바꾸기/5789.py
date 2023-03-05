@@ -7,7 +7,7 @@ for tc in range(1, T+1):
     # N : 상자의 개수
     # Q : L,R을 반복할 횟수
     matrix = [0] * (N + 1)  # i가 들어갈 N 길이의 배열
-    
+
     for i in range(1, Q+1):
         # i : matrix에 L부터 R에 넣을 값
         L, R = map(int, input().split())
