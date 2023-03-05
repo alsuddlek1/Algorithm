@@ -23,9 +23,10 @@ o.o.o
 .o.o.
 o.o.o
 .o.o.
-5
-oo.o.
-oo..o
-..o..
-o.oo.
-.o..o
+6
+oo.o.o
+oo..oo
+..o..o
+o.oo.o
+.o....
+.....o

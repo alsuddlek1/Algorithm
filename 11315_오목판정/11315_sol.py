@@ -15,6 +15,8 @@ for tc in range(1,T+1):
         for j in range(N):
             if data[i][j] == 'o':
                 cnt += 1
+            if data[i][j] == '.':
+                cnt = 0
         if cnt >= 5:
             result += 1
 
@@ -24,6 +26,8 @@ for tc in range(1,T+1):
         for j in range(N):
             if data[j][i] == 'o':
                 cnt += 1
+            if data[j][i] == '.':
+                cnt = 0
         # print(cnt)
         if cnt >= 5:
             result += 1
@@ -33,6 +37,8 @@ for tc in range(1,T+1):
     for i in range(N):
         if data[i][i] == 'o':
             cnt += 1
+        if data[i][i] == '.':
+            cnt = 0
     # print(cnt)
         if cnt >= 5:
             result += 1
@@ -42,6 +48,8 @@ for tc in range(1,T+1):
     for i in range(N):
         if data[i][N-i-1] == 'o':
             cnt += 1
+        if data[i][N-i-1] == '.':
+            cnt = 0
         # print(cnt)
         if cnt >= 5:
             result += 1
