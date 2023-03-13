@@ -70,8 +70,37 @@ sys.stdin = open('input.txt')
 # A,B,C = map(int,input().split())
 # print(A+B+C)
 
-print('|\_/|')
-print("|q p|   /}")
-print('( 0 )"""\\')
-print('|"^"`    |')
-print('||_/=\\\\__|')
+# print('|\_/|')
+# print("|q p|   /}")
+# print('( 0 )"""\\')
+# print('|"^"`    |')
+# print('||_/=\\\\__|')
+
+# T = int(input())
+# for tc in range(1, T+1):
+#     data = input()
+#     result = data[0],data[-1]
+#     print(''.join(result))
+
+# data = input()
+# print(ord(input()))
+#
+# T = int(input())
+# data = list(input())
+# # print(data)
+# cnt = 0
+# for i in data:
+#     cnt += int(i)
+# print(cnt)
+
+# T = int(input()) # 테스트케이스
+# for tc in range(1, T+1):
+#     R, S = input().split()
+#     # print(R,S)
+#     r = int(R)
+#
+#     result = []
+#     for i in range(len(S)):
+#         # print(S[i])
+#         result.append(S[i]*r)
+#     print(''.join(result))
