@@ -104,3 +104,8 @@ sys.stdin = open('input.txt')
 #         # print(S[i])
 #         result.append(S[i]*r)
 #     print(''.join(result))
+
+
+for i in range(100):
+    result = input()
+    print(result)
