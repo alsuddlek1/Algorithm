@@ -105,7 +105,21 @@ sys.stdin = open('input.txt')
 #         result.append(S[i]*r)
 #     print(''.join(result))
 
+N = int(input())
 
-for i in range(100):
-    result = input()
-    print(result)
+for i in range(1, N+1):
+    for j in range(1, N-i+1):
+        print(' ', end="")
+    for j in range(N-i+1,N+i):
+        print('*', end="")
+    # for j in range(N+i, 2*(N-1)):
+    #     print(' ', end="")
+    print()
+for i in range(N+1, 2*N):
+    for j in range(1, i-N+1):
+        print(' ', end="")
+    for j in range(i-N+1,2*N-i+N):
+        print('*', end="")
+    # for j in range(2*N-i+N, 2*N):
+        # print(' ', end="")
+    print()
