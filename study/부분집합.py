@@ -1,3 +1,5 @@
+## 부분집합
+
 def f(i, k):
     if i == k:
         print(bit)
