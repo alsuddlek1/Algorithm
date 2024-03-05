@@ -1,3 +1,5 @@
+# 백트래킹
+
 def backtrack(a, k, input):
     global MAXCANDIDATES
     c = [0] * MAXCANDIDATES
