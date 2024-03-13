@@ -11,7 +11,7 @@ for tc in range(1, T+1):
     for i in range(N):
         # i : data의 열 인덱스
         result_90 = [] #시계방향으로 90 옮긴 값들을 담을 리스트
-        result_180 = []
+        result_180 = [] # 180도
         result_270 = []
         for j in range(N):
             # j : data의 행 인덱스
