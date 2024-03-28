@@ -25,20 +25,26 @@ def DFS(now, adj, visited):
 fromS = [0]*(n+1)
 fromS[t] = 1
 DFS(s, adj, fromS)
+print(fromS)
 
 fromT = [0]*(n+1)
 fromT[s] = 1
 DFS(t, adj, fromT)
+print(fromT)
 
 toS = [0] * (n+1)
 DFS(s,adjR, toS)
+print(toS)
 
 toT = [0] * (n+1)
 DFS(t, adjR, toT)
+print(toT)
 
 count = 0
 for i in range(1, n+1):
     if fromS[i] and fromT[i] and toS[i] and toT[i]:
         count += 1
 
+print(adj)
+print(adjR)
 print(count-2)
