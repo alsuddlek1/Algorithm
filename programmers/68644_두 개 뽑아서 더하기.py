@@ -1,7 +1,6 @@
 def solution(numbers):
     answer = []
     n = len(numbers)  # 5
-    # 0,1,2,3,4
 
     c = 0
     for i in range(n):
