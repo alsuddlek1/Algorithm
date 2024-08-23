@@ -14,4 +14,5 @@ for _ in range(4):
             # print(matrix)
             # if matrix[i][j] >= 1:
             result +=1
+
 print(result)
