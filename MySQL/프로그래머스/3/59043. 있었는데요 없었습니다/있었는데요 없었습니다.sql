@@ -1,0 +1,11 @@
+## ANIMAL_INS : 보호소 들어온 동물 정보
+## ANIMAL_OUTS : 입양 보낸 동물 정보
+
+## 보호 시작일보다 입양일이 더 빠른 동물의 아이디와 이름 조회
+## 보호 시작일이 빠른 순으로 조회
+
+SELECT INS.ANIMAL_ID, INS.NAME
+FROM ANIMAL_INS INS JOIN ANIMAL_OUTS OUTS
+ON INS.ANIMAL_ID = OUTS.ANIMAL_ID
+WHERE INS.DATETIME >= OUTS.DATETIME
+ORDER BY INS.DATETIME;
