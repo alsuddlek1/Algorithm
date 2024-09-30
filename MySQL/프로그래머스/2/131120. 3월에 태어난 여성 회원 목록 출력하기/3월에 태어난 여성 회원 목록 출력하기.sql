@@ -1,0 +1,13 @@
+## MEMBER_PROFILE  : 회원정보
+
+## 생일이 3월인 여성 회원의 ID, 이름, 성별, 생년월일 조회
+## 전화번호 = NULL -> 출력대상 제외
+## 회원 ID 기준 오름차순 정렬
+## 데이트 포맷이 예시와 동일
+
+SELECT MEMBER_ID, MEMBER_NAME, GENDER, DATE_FORMAT(DATE_OF_BIRTH, "%Y-%m-%d") AS DATE_OF_BIRTH FROM MEMBER_PROFILE
+WHERE TLNO IS NOT NULL 
+  # AND DATE_OF_BIRTH BETWEEN 'YYYY-03-01' AND 'YYYY-03-31'
+  AND MONTH(DATE_OF_BIRTH) = 3 
+  AND GENDER = "W"
+ORDER BY MEMBER_ID
