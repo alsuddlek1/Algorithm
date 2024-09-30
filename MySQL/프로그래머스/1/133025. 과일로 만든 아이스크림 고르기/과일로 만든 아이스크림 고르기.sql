@@ -1,0 +1,11 @@
+## FIRST_HALF : 아이스크림 가게 상반기 주문 정보
+## ICECREAM_INFO : 아이스크림 성분 정보
+
+## 아이스크림 총 주문량 > 3000, 아이스크림 주 성분이 과일인 아이스크림의 맛
+## 총주문량이 큰 순서대로 조회
+
+SELECT HALF.FLAVOR FROM FIRST_HALF HALF
+JOIN ICECREAM_INFO INFO
+USING(FLAVOR)
+WHERE HALF.TOTAL_ORDER > 3000 AND INFO.INGREDIENT_TYPE = "fruit_based"
+ORDER BY HALF.TOTAL_ORDER DESC
