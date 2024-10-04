@@ -1,0 +1,4 @@
+## ANIMAL_INS : 보호소에 들어온 동물 정보
+
+SELECT * FROM ANIMAL_INS
+ORDER BY ANIMAL_ID
