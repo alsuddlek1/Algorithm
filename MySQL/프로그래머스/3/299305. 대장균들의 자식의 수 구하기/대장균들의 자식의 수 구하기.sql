@@ -1,0 +1,10 @@
+## ECOLI_DATA : 대장균들의 정보, 최초의 대장균 개체의 PARENT_ID = NULL
+
+## ID, CHILD_COUNT를 출력, 자식이 없다면 자식의 수는 0으로 출력
+## 개체의 ID에 대해 오름차순
+
+SELECT E.ID, COUNT(C.ID) AS CHILD_COUNT FROM ECOLI_DATA E
+LEFT JOIN ECOLI_DATA C
+ON E.ID = C.PARENT_ID
+GROUP BY E.ID
+ORDER BY E.ID
