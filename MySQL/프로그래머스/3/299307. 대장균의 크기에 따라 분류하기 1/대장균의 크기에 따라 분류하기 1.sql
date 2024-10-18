@@ -1,0 +1,11 @@
+## ECOLI_DATA : 대장균 정보
+
+## 대장균 개체 크기
+## ID, SIZE 출력, ID 오름차순
+
+SELECT ID, (CASE
+           WHEN SIZE_OF_COLONY <= 100 THEN "LOW"
+           WHEN SIZE_OF_COLONY > 1000 THEN "HIGH"
+           ELSE "MEDIUM" END) AS SIZE
+FROM ECOLI_DATA
+ORDER BY ID
