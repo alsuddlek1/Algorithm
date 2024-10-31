@@ -1,0 +1,20 @@
+## FISH_INFO : 잡은 물고기 정보
+# 평균 길이가 33CM 이상인 물고기 -> 종류별로 분류하여 수, 최대길이, 물고기 종 출력
+# 물고기 종류 오름차순
+# 10CM 이하의 물고기 -> 10CM 로 취급
+
+SELECT COUNT(*) AS FISH_COUNT,
+    MAX(LENGTH) AS MAX_LENGTH,
+    FISH_TYPE
+    # SUM(CASE
+    #     WHEN LENGTH IS NULL THEN 10
+    #     ELSE LENGTH
+    # END)/COUNT(FISH_TYPE) AS AVG
+    
+FROM FISH_INFO
+GROUP BY FISH_TYPE
+HAVING SUM(CASE
+        WHEN LENGTH IS NULL THEN 10
+        ELSE LENGTH
+    END)/COUNT(FISH_TYPE) >= 33
+ORDER BY FISH_TYPE
