@@ -1,0 +1,12 @@
+## FISH_INFO : 잡은 물고기 정보
+## FISH_NAME_INFO : 물고기 이름 ㅈ ㅓㅇ보
+
+## 물고기 종류 별 물고기의 이름, 잡은 수
+## 잡은 수 기준 내림차준 DESC
+
+SELECT COUNT(*) AS FISH_COUNT, N.FISH_NAME
+FROM FISH_INFO I
+JOIN FISH_NAME_INFO N
+ON I.FISH_TYPE = N.FISH_TYPE
+GROUP BY N.FISH_NAME
+ORDER BY FISH_COUNT DESC
