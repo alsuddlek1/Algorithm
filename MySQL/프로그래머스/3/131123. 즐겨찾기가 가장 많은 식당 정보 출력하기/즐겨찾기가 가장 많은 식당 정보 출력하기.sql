@@ -1,0 +1,14 @@
+## REST_INFO : 식당 정보
+
+# 음식종류별로 즐겨찾기수가 가장 많은 식당 -> 음식 종류, id, 식당이름, 즐겨찾기수 조회
+# 음식 종류 내림차순 DESC
+
+# MAX/MIN -> 함수 값에서만 반환을 한다? 그러므로 조인을 해서 나온 결과를 출력이라,,
+
+SELECT T1.FOOD_TYPE, T1.REST_ID, T1.REST_NAME, T1.FAVORITES
+FROM REST_INFO T1
+JOIN (SELECT FOOD_TYPE, MAX(FAVORITES) AS T2_MAX
+     FROM REST_INFO
+     GROUP BY FOOD_TYPE) AS T2
+ON T1.FOOD_TYPE = T2.FOOD_TYPE AND T1.FAVORITES = T2.T2_MAX
+ORDER BY FOOD_TYPE DESC
