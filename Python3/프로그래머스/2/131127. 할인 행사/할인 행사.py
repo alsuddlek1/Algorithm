@@ -20,15 +20,15 @@ def solution(want, number, discount):
             if discount[j] in dic:
                 dic[discount[j]] += 1
                 
-        # 2-2. dic >= want_dic answer => i+1
-        cnt = 0
-        for k in range(len(want)):
-            if dic[want[k]] >= want_dic[want[k]]:
-                cnt +=1
-                if cnt == len(want):
-                    print(cnt)
-                    answer += 1
-                    print(answer)
+        # 2-2. dic >= want_dic answer => answer += 1
+        # cnt = 0
+        # for k in range(len(want)):
+        #     if dic[want[k]] >= want_dic[want[k]]:
+        #         cnt +=1
+        #         if cnt == len(want):
+        #             answer += 1
+        if dic == want_dic:
+            answer += 1
 
         dic = {key : 0 for key in dic}
         
