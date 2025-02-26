@@ -8,7 +8,7 @@ dxs = [-1, 1, 0, 0] # 상,하,좌,우
 dys = [0, 0, -1, 1]
 
 island_id = 2
-result = float('inf')
+result = 1000000
 
 # 범위
 def in_range(x, y):
@@ -54,7 +54,7 @@ def bfs(island_id):
                 # 다른 섬에 도착한 경우
                 if data[nx][ny] > 0 and data[nx][ny] != island_id:
                     return distance[x][y]
-    return float('inf')
+    return 1000000
 
 # 1-2. 섬구분
 for i in range(N):
@@ -65,7 +65,8 @@ for i in range(N):
 
 # 2-2. 최단거리 - BFS 호출
 for i in range(2, island_id):
-    if bfs(i) < result:
-        result = bfs(i)
+    distance = bfs(i)
+    if distance < result:
+        result = distance
 
 print(result)
